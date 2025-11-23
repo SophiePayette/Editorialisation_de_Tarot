@@ -3,44 +3,66 @@
 
 <head>
 	<title>Éditorialisation d'un texte</title>
+	<link rel="stylesheet" href='style.css'>
 </head>
 
 <body>
 
 	<h1>Éditorialisation d'un tirage de Tarot à trois cartes</h1>
-	<p> 
-	
+
 	<h2>Présent</h2>
-		 
-		<h3>Roi de Pentacle</h2>
-		<img src='https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg' alt='roi de pentacles' width='200px'/> 
-		 
-		 <aside>
-			 <table>
-			  <tr>
-				<th>Attribut</th>
-				<th>Valeur</th>
-			  </tr>
-			  <tr>
-				<td>Famille</td>
-				<td>Pentacle</td>
-			  </tr>
-			  <tr>
-				<td>Rang</td>
-				<td>Roi</td>
-			  </tr>
-			  <tr>
-				<td>Couleur</td>
-				<td>Jaune, vert et noir</td>
-			  </tr>
-			  <tr>
-				<td>Symboles visibles</td>
-				<td>Cercle, étoile et verdure</td>
-			  </tr>
-			</table> 
+
+	<h3>Roi de Pentacle</h3>
+
+	<section class="carte">
+		<figure class="image_map">
+			<img class="arriere_plan" src='https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg' alt='roi de pentacles'
+				 />
+			<img class="premier_plan" src='https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg' alt='roi de pentacles'
+				 />
+				 
+			<p id="roi">description roi <a href="#">retour</a></p>
+			<p id="pentacle">description pentacle <a href="#">retour</a></p>
+			<p id="verdure">description verdure <a href="#">retour</a></p>
+		</figure>
+
+		<aside>
+			<table vocab="http://sophiepayette.com/" typeof="Carte">
+				<tr>
+					<th>Attribut</th>
+					<th>Valeur</th>
+					<th>Interprétation</th>
+				</tr>
+				<tr>
+					<td>Famille</td>
+					<td property="famille"><a href="#pentacle">Pentacle</a></td>
+					<td>Argent et monde matériel</td>
+				</tr>
+				<tr>
+					<td>Rang</td>
+					<td property="rang"><a href='#roi'>Roi</a></td>
+					<td>Stabilité et confiance</td>
+				</tr>
+				<tr>
+					<td>Couleur</td>
+					<td>Jaune, vert et noir</td>
+					<td>Créativité, pouvoir et prospérité</td>
+				</tr>
+				<tr>
+					<td>Symboles visibles</td>
+					<td><a href='#verdure'>Cercle, étoile et verdure</a></td>
+					<td>Unité, connection au monde matériel et connaissance</td>
+				</tr>
+
+			</table>
+
+
+			<p>Par le passé, j'entretenais une confiance inébranlable envers le monde matériel.</p>
 		</aside>
-		<p>Ici j'explique le symbolisme de la carte</p>
-	
+
+
+	</section>
+
 </body>
 
 </html>
