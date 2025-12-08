@@ -1,4 +1,7 @@
 
+html{
+    scroll-behavior: smooth !important;
+}
 
 body {
     max-width: 1080px;
@@ -18,6 +21,8 @@ th,
 td {
     border: 1px solid black;
 }
+
+
 
 .carte {
     display: flex;
@@ -55,6 +60,11 @@ td {
         left: 0;
         z-index: -1;
     }
+}
+
+    p {
+        scroll-margin-top: 300px;
+    }
 
     /*clip path pour le roi de pentacles*/
 
@@ -69,19 +79,19 @@ td {
     /* clip path avec https://bennettfeely.com/clippy/ */
     
 
-    .premier_plan:has(~ #roi:target) {
+    .carte:has(#roi:target) .premier_plan{
         clip-path: polygon(54% 20%, 49% 17%, 45% 22%, 39% 21%, 44% 26%, 42% 32%, 32% 36%, 28% 37%, 23% 39%, 22% 42%, 26% 48%, 24% 52%, 28% 53%, 32% 57%, 33% 63%, 27% 79%, 30% 83%, 37% 84%, 45% 84%, 58% 84%, 65% 78%, 73% 77%, 82% 78%, 76% 72%, 78% 62%, 75% 57%, 81% 54%, 81% 47%, 77% 41%, 71% 35%, 66% 32%, 61% 29%, 60% 24%, 63% 20%);
     }
 
-    .premier_plan:has(~ #pentacle:target) {
+    .carte:has(#pentacle:target) .premier_plan{
         clip-path: circle(6% at 66% 49%);
     }
 
-    .premier_plan:has(~ #verdure:target) {
+    .carte:has(#verdure:target) .premier_plan{
         clip-path: polygon(8% 32%, 14% 31%, 16% 37%, 22% 33%, 22% 39%, 26% 38%, 31% 40%, 29% 43%, 25% 43%, 20% 45%, 16% 48%, 11% 47%, 13% 44%, 10% 43%, 6% 47%, 3% 45%, 3% 41%, 11% 39%, 9% 36%);
     }
 
-    .premier_plan:has(~ #couleur_roi:target) {
+    .carte:has(#couleur_roi:target) .premier_plan{
        clip-path: polygon(3% 88%, 95% 89%, 96% 55%, 89% 55%, 82% 52%, 83% 48%, 78% 42%, 75% 37%, 78% 38%, 83% 34%, 83% 26%, 86% 24%, 92% 24%, 92% 26%, 95% 26%, 96% 4%, 4% 4%, 3% 38%, 7% 37%, 12% 38%, 18% 40%, 19% 42%, 19% 48%, 19% 51%, 20% 54%, 14% 56%, 14% 67%, 10% 67%, 8% 67%, 6% 67%, 2% 67%);
     }
     /*clip path pour la grande prétresse*/
@@ -94,19 +104,19 @@ td {
         display: block;
     }
 
-    .premier_plan:has(~ #majeur:target) {
+    .carte:has(#majeur:target) .premier_plan{
         clip-path: polygon(0 91%, 100% 91%, 100% 100%, 0% 100%); 
     } 
 
-    .premier_plan:has(~ #II:target) {
+    .carte:has(#II:target) .premier_plan{
     clip-path: polygon(43% 1%, 57% 1%, 57% 7%, 43% 7%);
     }
 
-    .premier_plan:has(~ #couleur_grande_pretresse:target){
+    .carte:has(#couleur_grande_pretresse:target) .premier_plan{
         clip-path: polygon(4% 87%, 21% 88%, 16% 91%, 76% 91%, 95% 91%, 88% 88%, 95% 87%, 95% 2%, 66% 2%, 62% 5%, 68% 8%, 70% 8%, 76% 15%, 79% 20%, 76% 72%, 73% 59%, 69% 40%, 61% 37%, 57% 29%, 58% 24%, 69% 22%, 51% 21%, 32% 22%, 40% 25%, 42% 29%, 39% 35%, 32% 43%, 29% 52%, 29% 61%, 26% 66%, 25% 80%, 20% 79%, 20% 20%, 22% 19%, 29% 8%, 37% 5%, 38% 2%, 4% 2%)
     }
 
-    .premier_plan:has(~ #lune:target){
+    .carte:has(#lune:target) .premier_plan{
         clip-path: polygon(4% 87%, 21% 88%, 16% 91%, 76% 91%, 95% 91%, 88% 88%, 95% 87%, 95% 2%, 66% 2%, 62% 5%, 68% 8%, 70% 8%, 76% 15%, 79% 20%, 76% 72%, 73% 59%, 69% 40%, 61% 37%, 57% 29%, 58% 24%, 69% 22%, 51% 21%, 32% 22%, 40% 25%, 42% 29%, 39% 35%, 32% 43%, 29% 52%, 29% 61%, 26% 66%, 25% 80%, 20% 79%, 20% 20%, 22% 19%, 29% 8%, 37% 5%, 38% 2%, 4% 2%)
     }
 
@@ -120,20 +130,18 @@ td {
         display: block;
     }
 
-    .premier_plan:has(~ #coupes:target){
+    .carte:has(#coupes:target) .premier_plan{
         clip-path: polygon(81% 95%, 88% 94%, 85% 92%, 84% 87%, 88% 81%, 89% 79%, 84% 79%, 77% 80%, 78% 84%, 81% 87%, 79% 90%, 76% 94%);
     }
 
-    .premier_plan:has(~ #cinq:target){
+    .carte:has(#cinq:target) .premier_plan{
         clip-path: polygon(40% 2%, 40% 10%, 55% 10%, 55% 2%);
     }
 
-    .premier_plan:has(~ #montagne:target){
+    .carte:has(#montagne:target) .premier_plan{
         clip-path: polygon(40% 80%, 4% 80%, 4% 65%, 8% 60%, 10% 58%, 18% 58%, 19% 61%, 28% 61%,28% 65%, 60% 65%, 65% 63%, 93% 65%, 93% 80%);
     }
 
-    .premier_plan:has(~ #couleur_cinq_coupes:target){
+    .carte:has(#couleur_cinq_coupes:target) .premier_plan{
         clip-path: polygon(4% 2%, 93% 3%, 92% 81%, 89% 81%, 86% 79%, 81% 79%, 81% 79%, 85% 72%, 81% 71%, 75% 71%, 71% 73%, 75% 78%, 75% 81%, 74% 84%, 71% 87%, 71% 95%, 37% 95%, 38% 88%, 36% 80%, 37% 77%, 33% 78%, 27% 79%, 24% 77%, 23% 77%, 18% 75%, 17% 73%, 10% 78%, 3% 78%);
     }
-
-}
